@@ -1,0 +1,60 @@
+<?php
+	require_once 'mysql.php';
+	require_once 'functions.php'
+?>	
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="slick.min.js"></script>
+</head>
+<body>
+	<div class="menu_number_1">
+
+		<div class="top_menu">
+			<img class="wi-fi_ikonka" src="Left Side.svg">
+
+			<p class="time_user"></p>
+
+			<img class="ikonka_right" src="Right Side.svg">
+		</div>
+
+		<div class="phone">
+			<img class="img_phone" src="Hands Phone.svg">
+		</div>
+
+		<div class="bottom_text_and_button">
+			<p class="text_glav">Хорошего дня!<br> Нажмите, чтобы создать свою<br>
+			первую задачу</p>
+
+			<div>
+					<button class="button_add">
+					<p class="button_text"><span class="zadacha_pluse">+ </span> Создать новую задачу</p>
+					</button>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+$('.add').on('click',function() {
+	let xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+    		myFunction(this);
+    		console.log('dji')
+    	}
+    }
+	xmlhttp.open("GET", "cd_catalog.XMLHttpRequest", true);
+	xmlhttp.send();
+})
+</script>
+
+<script type="text/javascript" src="script.js"></script>
+
+
+</body>
+</html>
